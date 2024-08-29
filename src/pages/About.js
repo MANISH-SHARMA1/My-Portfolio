@@ -103,7 +103,7 @@ function About() {
           <p className="text-center text-2xl font-semibold">
             Certifi<span className="text-cyan-400">cates</span>
           </p>
-          <div className="flex justify-center  my-5">
+          <div className="flex justify-center my-5">
             <div>
               <div className="flex items-center justify-between mb-2">
                 <p className="text-cyan-400">

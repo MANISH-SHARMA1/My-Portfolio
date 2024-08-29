@@ -2,7 +2,7 @@ import React from "react";
 import { VscGithub } from "react-icons/vsc";
 import { SiLinkedin, SiCodechef } from "react-icons/si";
 import { MdCall, MdEmail } from "react-icons/md";
-import Message from "../components/Message";
+// import Message from "../components/Message";
 import Card from "../components/Card";
 import manishImg from "../assets/Manish.png";
 import ProjectCard from "../components/ProjectCard";
@@ -154,12 +154,12 @@ function Home() {
           ))}
         </div>
 
-        <section>
+        {/* <section>
           <p className="text-2xl font-semibold text-center my-5">
             Leave <span className="text-cyan-400">Message</span>
           </p>
           <Message />
-        </section>
+        </section> */}
       </div>
     </div>
   );
