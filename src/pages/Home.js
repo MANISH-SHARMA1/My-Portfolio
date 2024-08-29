@@ -69,7 +69,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="sm:flex-1 flex justify-center">
+          <div className="sm:flex-1 flex justify-center mb-5 sm:mb-0">
             <div>
               <img src={manishImg} alt="" className="size-64" />
               <div className="border-b-2 border-cyan-400 -mt-14 ml-8"></div>
