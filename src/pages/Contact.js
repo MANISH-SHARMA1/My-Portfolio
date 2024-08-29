@@ -12,24 +12,38 @@ function Contact() {
       </div>
 
       <div className="flex flex-col gap-2 sm:flex-row sm:justify-around my-5">
-        <div>
+        <div className="space-y-2 sm:space-y-0">
           <p className="flex justify-center sm:justify-normal items-center gap-2">
             <span className="text-cyan-400">
               <MdCall />
             </span>{" "}
-            +91-9634182319
+            <a href="tel:+919634182319" className="hover:underline">
+              +91-9634182319
+            </a>
           </p>
           <p className="flex justify-center sm:justify-normal items-center gap-2">
             <span className="text-cyan-400">
               <PiWhatsappLogo />
             </span>{" "}
-            +91-9634182319
+            <a
+              href="https://wa.me/919634182319?text=Hello%20there%2C%20I%20would%20like%20to%20inquire%20about..."
+              className="hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              +91-9634182319
+            </a>
           </p>
           <p className="flex justify-center sm:justify-normal items-center gap-2">
             <span className="text-cyan-400">
               <MdEmail />
             </span>{" "}
-            sharmanish2109@gmail.com
+            <a
+              href="mailto:sharmanish2109@gmail.com?subject=Hello%20Manish&body=I%20would%20like%20to%20discuss%20your%20portfolio"
+              className="hover:underline"
+            >
+              sharmanish2109@gmail.com
+            </a>
           </p>
         </div>
 

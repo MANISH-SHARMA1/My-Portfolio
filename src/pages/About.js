@@ -1,17 +1,28 @@
 import React from "react";
 import { PiGraduationCapBold, PiCertificateBold } from "react-icons/pi";
 import { LuSchool } from "react-icons/lu";
-import { SiCodeproject } from "react-icons/si";
 import certificate from "../assets/MERN_certificate.png";
+import ProjectCard from "../components/ProjectCard";
 
 function About() {
+  const project = [
+    {
+      name: "Social Media",
+      link: "https://github.com/MANISH-SHARMA1/Social-Media",
+    },
+    {
+      name: "Ecommerce",
+      link: "https://github.com/MANISH-SHARMA1/Ecommerce-application-",
+    },
+  ];
+
   return (
     <>
       <div className="text-white">
         {/* EDUCATION SECTION */}
         <section>
-          <p className="text-center text-cyan-400 text-2xl font-semibold">
-            Education
+          <p className="text-center text-2xl font-semibold">
+            Edu<span className="text-cyan-400">cation</span>
           </p>
 
           <div className="flex flex-col gap-5 md:gap-5 md:flex-row md:justify-around items-center my-5">
@@ -29,10 +40,13 @@ function About() {
               </div>
               <p>
                 Choudhary Charan Singh University,{" "}
-                <span className="text-cyan-400">Meerut, Uttar Pradesh</span>
+                <span className="text-cyan-400 text-sm">
+                  Meerut, Uttar Pradesh
+                </span>
               </p>
               <p>
-                <span className="text-cyan-400">Aggregation:</span> 74.5%
+                <span className="text-cyan-400 text-sm">Aggregation:</span>{" "}
+                74.5%
               </p>
             </div>
 
@@ -50,10 +64,12 @@ function About() {
               </div>
               <p>
                 Central Board of Secondary Education{" "}
-                <span className="text-cyan-400">Saharanpur, Uttar Pradesh</span>
+                <span className="text-cyan-400 text-sm">
+                  Saharanpur, Uttar Pradesh
+                </span>
               </p>
               <p>
-                <span className="text-cyan-400">Aggregation:</span> 70%
+                <span className="text-cyan-400 text-sm">Aggregation:</span> 70%
               </p>
             </div>
 
@@ -71,10 +87,12 @@ function About() {
               </div>
               <p>
                 Central Board of Secondary Education{" "}
-                <span className="text-cyan-400">Saharanpur, Uttar Pradesh</span>
+                <span className="text-cyan-400 text-sm">
+                  Saharanpur, Uttar Pradesh
+                </span>
               </p>
               <p>
-                <span className="text-cyan-400">Aggregation:</span> 70%
+                <span className="text-cyan-400 text-sm">Aggregation:</span> 70%
               </p>
             </div>
           </div>
@@ -82,8 +100,8 @@ function About() {
 
         {/* CERTIFICATES */}
         <section>
-          <p className="text-center text-cyan-400 text-2xl font-semibold">
-            Certificates
+          <p className="text-center text-2xl font-semibold">
+            Certifi<span className="text-cyan-400">cates</span>
           </p>
           <div className="flex justify-center  my-5">
             <div>
@@ -107,50 +125,14 @@ function About() {
 
         {/* PROJECTS */}
         <section>
-          <p className="text-center text-cyan-400 text-2xl font-semibold">
-            Projects
+          <p className="text-center text-2xl font-semibold">
+            Pro<span className="text-cyan-400">jects</span>
           </p>
 
           <div className="flex flex-col gap-5 md:gap-5 md:flex-row md:justify-around items-center my-5">
-            <div
-              style={{ backgroundColor: "rgb(14, 54, 70)" }}
-              className="rounded p-5 w-80"
-            >
-              <a
-                href="https://github.com/MANISH-SHARMA1/Social-Media"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="text-cyan-400 flex justify-between">
-                  <p>
-                    <SiCodeproject />
-                  </p>
-                  <p>
-                    Social Media <span className="text-white">Website</span>
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            <div
-              style={{ backgroundColor: "rgb(14, 54, 70)" }}
-              className="rounded p-5 w-80"
-            >
-              <a
-                href="https://github.com/MANISH-SHARMA1/Ecommerce-application-"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="text-cyan-400 flex justify-between">
-                  <p>
-                    <SiCodeproject />
-                  </p>
-                  <p>
-                    Ecommerce <span className="text-white">Website</span>
-                  </p>
-                </div>
-              </a>{" "}
-            </div>
+            {project.map((data, idx) => (
+              <ProjectCard project={data} key={idx} />
+            ))}
           </div>
         </section>
       </div>

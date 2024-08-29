@@ -1,28 +1,31 @@
 import React from "react";
-import { AiFillStar } from "react-icons/ai";
 import { SiCodechef } from "react-icons/si";
 
-function Card() {
+function Card({ data }) {
   return (
     <>
       <div
         style={{ backgroundColor: "rgb(14, 54, 70)" }}
-        className="rounded p-5"
+        className="rounded p-5 space-y-4"
       >
-        <div className="flex justify-between">
-          <p>
-            <SiCodechef />
+        <div className="flex justify-between items-center">
+          <SiCodechef className="text-2xl" />
+          <p className="text-cyan-400">
+            {data?.name} <span className="text-white">Website</span>
           </p>
-          <p className="text-cyan-400">Alice</p>
         </div>
-
-        <div className="flex gap-2 my-5">
-          <AiFillStar />
-          <AiFillStar />
-          <AiFillStar />
+        <div className="flex gap-5">
+          <div className="space-y-4 text-xs text-cyan-400">
+            <p>Role:</p>
+            <p>Tech Stack:</p>
+            <p>Date:</p>
+          </div>
+          <div className="space-y-4 text-xs">
+            <p>{data?.role}</p>
+            <p>{data?.techStack}</p>
+            <p>{data?.date}</p>
+          </div>
         </div>
-
-        <p>You're doing great work, keep going... </p>
       </div>
     </>
   );
