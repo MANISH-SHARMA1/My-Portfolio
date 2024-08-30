@@ -21,11 +21,13 @@ function Home() {
   const project = [
     {
       name: "Social Media",
-      link: "https://github.com/MANISH-SHARMA1/Social-Media",
+      link: "https://github.com/MANISH-SHARMA1/sociopedia",
+      liveLink: "https://sociopedia-client-psi.vercel.app/",
     },
     {
       name: "Ecommerce",
       link: "https://github.com/MANISH-SHARMA1/Ecommerce-application-",
+      liveLink: "https://github.com/MANISH-SHARMA1/Ecommerce-application-",
     },
   ];
   return (
