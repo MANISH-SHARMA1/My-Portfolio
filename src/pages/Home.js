@@ -12,9 +12,9 @@ function Home() {
   const card = [
     {
       role: "Full Stack Developer (MERN)",
-      name: "OffShop",
+      name: "Book And Buy",
       techStack: "MongoDb, Mongoose, Express.js, Node.js, React.js",
-      date: "06/06/2024 - 30/08/2024",
+      date: "June 2024 - January 2025",
     },
   ];
 
@@ -30,6 +30,7 @@ function Home() {
       liveLink: "https://github.com/MANISH-SHARMA1/Ecommerce-application-",
     },
   ];
+
   return (
     <div>
       <div className="text-white">
