@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { PiGraduationCapBold, PiCertificateBold } from "react-icons/pi";
 import { LuSchool } from "react-icons/lu";
 import certificate from "../assets/MERN_certificate.png";
 import ProjectCard from "../components/ProjectCard";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function About() {
   const project = [
@@ -16,19 +20,50 @@ function About() {
     },
   ];
 
+  const educationRef = useRef(null);
+
+  useEffect(() => {
+    const cards = educationRef.current.querySelectorAll(".edu-card");
+    const isSmallScreen = window.innerWidth < 768;
+
+    cards.forEach((card, idx) => {
+      const direction = isSmallScreen ? (idx % 2 === 0 ? -100 : 100) : 100;
+
+      gsap.fromTo(
+        card,
+        { x: direction, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.8,
+          delay: isSmallScreen ? 0 : idx * 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+  }, []);
+
   return (
     <>
-      <div className="text-white">
+      <div className="text-white overflow-x-hidden">
         {/* EDUCATION SECTION */}
         <section>
           <p className="text-center text-2xl font-semibold">
             Edu<span className="text-cyan-400">cation</span>
           </p>
 
-          <div className="flex flex-col gap-5 md:gap-5 md:flex-row md:justify-around items-center my-5">
+          <div
+            ref={educationRef}
+            className="flex flex-col gap-5 md:gap-5 md:flex-row md:justify-around items-center my-5"
+          >
             <div
               style={{ backgroundColor: "rgb(14, 54, 70)" }}
-              className="rounded p-5 w-80"
+              className="edu-card rounded p-5 w-80 opacity-0"
             >
               <div className="text-xl flex item-center justify-between">
                 <p className="text-cyan-400">
@@ -52,7 +87,7 @@ function About() {
 
             <div
               style={{ backgroundColor: "rgb(14, 54, 70)" }}
-              className="rounded p-5 w-80"
+              className="edu-card rounded p-5 w-80 opacity-0"
             >
               <div className="text-xl flex item-center justify-between">
                 <p className="text-cyan-400">
@@ -75,7 +110,7 @@ function About() {
 
             <div
               style={{ backgroundColor: "rgb(14, 54, 70)" }}
-              className="rounded p-5 w-80"
+              className="edu-card rounded p-5 w-80 opacity-0"
             >
               <div className="text-xl flex item-center justify-between">
                 <p className="text-cyan-400">
@@ -103,21 +138,21 @@ function About() {
           <p className="text-center text-2xl font-semibold">
             Certifi<span className="text-cyan-400">cates</span>
           </p>
-          <div className="flex justify-center my-5">
+          <div className="flex items-center justify-center my-5 mx-5 sm:mx-0">
             <div>
               <div className="flex items-center justify-between mb-2">
                 <p className="text-cyan-400">
                   <PiCertificateBold size={23} />
                 </p>{" "}
-                <p>
-                  Full Stack Development Course using{" "}
+                <p className="text-xs sm:text-base">
+                  Full Stack Web Development Course using{" "}
                   <span className="text-cyan-400">MERN</span>
                 </p>
               </div>
               <img
                 src={certificate}
                 alt="certificate"
-                className="w-96 border-2 border-amber-600 rounded"
+                className="w-[400px] sm:w-[500px] border-2 border-amber-600 rounded"
               />
             </div>
           </div>
@@ -129,9 +164,9 @@ function About() {
             Pro<span className="text-cyan-400">jects</span>
           </p>
 
-          <div className="flex flex-col gap-5 md:gap-5 md:flex-row md:justify-around items-center my-5">
+          <div className="flex flex-col gap-5 md:gap-5 md:flex-row md:justify-around items-center mt-5 mb-40 mx-5 sm:mx-20">
             {project.map((data, idx) => (
-              <ProjectCard project={data} key={idx} />
+              <ProjectCard project={data} key={idx} index={idx} />
             ))}
           </div>
         </section>
