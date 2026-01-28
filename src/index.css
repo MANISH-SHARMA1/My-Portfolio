@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Rubik:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap");
+@import './assets/fonts/fonts.css';
 
 body {
-  background-color: rgb(13, 48, 62);
+  background-color: #0d303e;
   font-family: "Roboto Serif", serif;
   font-optical-sizing: auto;
   font-variation-settings: "wdth" 100, "GRAD" 0;
@@ -13,4 +14,43 @@ body {
 
 .hideScrollbar::-webkit-scrollbar {
   display: none;
+}
+
+/* whatsapp-pulse */
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.animate-whatsapp-pulse {
+  animation: whatsapp-pulse 1.5s infinite;
+}
+
+@keyframes crazy-bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-30deg) translateY(200px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1) rotate(10deg) translateY(-20px);
+  }
+  80% {
+    transform: scale(0.95) rotate(-5deg) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg) translateY(0);
+  }
+}
+
+.animate-crazy-bounce-in {
+  animation: crazy-bounce-in 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }

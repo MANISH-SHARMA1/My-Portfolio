@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Klaxon Crunchy';
+    src: url('./Klaxon-Crunchy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Klaxon Smooth';
+    src: url('./Klaxon-Smooth.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Devina Garden';
+    src: url('./Devina-Garden.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }

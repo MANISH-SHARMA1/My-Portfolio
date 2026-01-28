@@ -3,6 +3,11 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      fontFamily: {
+        klaxon: ['Klaxon Crunchy', "sans-serif"],
+        klaxonSmooth: ['Klaxon Smooth', "sans-serif"],
+        devinaGarden: ['Devina Garden', "sans-serif"]
+      },
       keyframes: {
         scroll: {
           "0%": { transform: "translateX(0%)" },

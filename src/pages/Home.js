@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { VscGithub } from "react-icons/vsc";
 import { SiLinkedin, SiCodechef } from "react-icons/si";
 import { MdCall, MdEmail } from "react-icons/md";
-// import Message from "../components/Message";
 import Card from "../components/Card";
 import manishImg from "../assets/Manish.png";
 import ProjectCard from "../components/ProjectCard";
@@ -12,17 +11,36 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Reactjs from "../assets/ReactImg.png";
 import Nextjs from "../assets/NextjsImg.png";
 import Typescript from "../assets/TypescriptImg.png";
-import CSS from "../assets/CSSimg.jpeg";
+import CSSImg from "../assets/CSSimg.jpeg";
 import Tailwindcss from "../assets/tailwindCssImg.png";
 import Nodejs from "../assets/nodejsImg.png";
 import Expressjs from "../assets/expressjsImg.png";
 import Mongoose from "../assets/mongoose.png";
 import mongoDb from "../assets/mongodbImg.jpg";
+import gsapImg from "../assets/gsapImg.png"
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
   const card = [
+    {
+      role: "Full Stack Developer",
+      name: "Book And Buy",
+      applicationType: "Website Revamp",
+      techStack:
+        "Next.js, TypeScript, TailwindCSS, GSAP, Motion, Node.js, Express.js, Mongoose, MongoDB",
+      date: "January 2026 - Present",
+      link: "https://bookandbuy.in"
+    },
+    {
+      role: "Full Stack Developer Intern",
+      name: "Aartick Technologies",
+      applicationType: "",
+      techStack:
+        "Next.js, TypeScript, TailwindCSS, GSAP, Motion, Node.js, Express.js, Mongoose, MongoDB",
+      date: "August 2025 - December 2025",
+      link: "https://zlshealth.com"
+    },
     {
       role: "Full Stack Developer (Nextjs)",
       name: "Book And Buy Admin Dashboard",
@@ -30,6 +48,7 @@ function Home() {
       techStack:
         "Next.js, TypeScript, TailwindCSS, Node.js, Express.js, Mongoose, MongoDB",
       date: "May 2025 - June 2025",
+      link: ""
     },
     {
       role: "Full Stack Developer (React Native)",
@@ -38,6 +57,7 @@ function Home() {
       techStack:
         "React Native, TailwindCSS, TypeScript, Node.js, Express.js, Mongoose, MongoDB",
       date: "February 2025 - April 2025",
+      link: ""
     },
     {
       role: "Full Stack Developer (MERN)",
@@ -46,6 +66,7 @@ function Home() {
       techStack:
         "React.js, TailwindCSS, GSAP, Node.js, Express.js, Mongoose, MongoDB",
       date: "June 2024 - January 2025",
+      link: "https://bookandbuy.in"
     },
   ];
 
@@ -66,7 +87,7 @@ function Home() {
     gsap.to(".header", {
       y: 0,
       opacity: 1,
-      duration: 1.3,
+      duration: 0.5,
       stagger: 0.3,
       ease: "power3.out",
     });
@@ -77,8 +98,9 @@ function Home() {
     { id: 2, img: Reactjs, content: "React.js" },
     { id: 3, img: Reactjs, content: "React Native" },
     { id: 4, img: Typescript, content: "TypeScript" },
+    { id: 11, img: gsapImg, content: "GSAP"},
     { id: 5, img: Tailwindcss, content: "Tailwind CSS" },
-    { id: 6, img: CSS, content: "CSS" },
+    { id: 6, img: CSSImg, content: "CSS" },
     { id: 7, img: Nodejs, content: "Node.js" },
     { id: 8, img: Expressjs, content: "Express.js" },
     { id: 9, img: Mongoose, content: "Mongoose" },
@@ -88,7 +110,7 @@ function Home() {
   const repeatedCards = [...cards, ...cards];
 
   return (
-    <div className="text-white overflow-x-hidden">
+    <div className="max-w-screen-2xl mx-auto text-white overflow-x-hidden">
       {/* TOP SECTION */}
       <section className="flex flex-col-reverse mx-5 sm:flex-row sm:items-center -mt-16 sm:-mt-0">
         <div className="sm:flex-1 flex flex-col gap-2">
@@ -129,7 +151,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="sm:flex-1 flex justify-center mb-5 sm:mb-0">
+        <div className="sm:flex-1 flex justify-center mb-5 sm:mb-0 header translate-y-[100%] drop-shadow-md opacity-0">
           <div>
             <img src={manishImg} alt="Manish Img" className="size-64" />
             <div className="border-b-2 border-cyan-400 -mt-14 ml-8"></div>
@@ -139,7 +161,7 @@ function Home() {
 
       {/* MIDDLE SECTION */}
       <section className="flex flex-col mx-5 sm:flex-row sm:items-center my-5">
-        <div className="flex-1 flex justify-center">
+        <div className="flex-1 flex justify-center header translate-y-[100%] drop-shadow-md opacity-0">
           <SiCodechef size={130} />
         </div>
 
@@ -194,7 +216,7 @@ function Home() {
         </div>
       </section>
 
-      <p className="text-2xl font-semibold text-center my-10 header translate-y-[100%] drop-shadow-md opacity-0">
+      <p id="techStack" className="scroll-mt-24 sm:scroll-mt-28 text-2xl font-semibold text-center my-10 header translate-y-[100%] drop-shadow-md opacity-0">
         Tech <span className="text-cyan-400">Stack</span>
       </p>
 
@@ -203,7 +225,7 @@ function Home() {
           {repeatedCards.map((card) => (
             <div
               key={card.id}
-              className="flex flex-col gap-2 justify-center min-w-[200px] h-[120px] text-white m-2 flex items-center justify-center text-xl font-semibold"
+              className="flex flex-col gap-2 justify-center min-w-[200px] h-[120px] text-white m-2 items-center text-xl font-semibold"
             >
               <img
                 src={card.img}
@@ -216,11 +238,11 @@ function Home() {
         </div>
       </div>
 
-      <p className="text-2xl font-semibold text-center my-10 header translate-y-[100%] drop-shadow-md opacity-0">
+      <p id="experience" className="scroll-mt-24 sm:scroll-mt-28 text-2xl font-semibold text-center my-10 header translate-y-[100%] drop-shadow-md opacity-0">
         Ex<span className="text-cyan-400">perience</span>
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-4">
+      <div className="grid grid-cols-1 md:grid-cols-2  gap-4 mx-4">
         {card.map((data, idx) => (
           <Card data={data} key={idx} />
         ))}
@@ -235,13 +257,6 @@ function Home() {
           <ProjectCard project={data} key={idx} index={idx} />
         ))}
       </div>
-
-      {/* <section>
-          <p className="text-2xl font-semibold text-center my-5">
-            Leave <span className="text-cyan-400">Message</span>
-          </p>
-          <Message />
-        </section> */}
     </div>
   );
 }

@@ -2,24 +2,64 @@ import React, { useEffect, useRef } from "react";
 import { PiGraduationCapBold, PiCertificateBold } from "react-icons/pi";
 import { LuSchool } from "react-icons/lu";
 import certificate from "../assets/MERN_certificate.png";
+import aartickExperience from "../assets/AartickExperienceLetter.jpg"
 import ProjectCard from "../components/ProjectCard";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function About() {
-  const project = [
-    {
-      name: "Social Media",
-      link: "https://github.com/MANISH-SHARMA1/Social-Media",
-    },
-    {
-      name: "Ecommerce",
-      link: "https://github.com/MANISH-SHARMA1/Ecommerce-application-",
-    },
-  ];
+const education = [
+  {
+    icon: <PiGraduationCapBold />,
+    qualification: "M.C.A",
+    qualifiedYear: "2025",
+    organisation: "Amity University",
+    organisationPlace: "Noida, U.P",
+    aggregation: "8.38",
+    aggregationType: "CGPA"
+  },
+  {
+    icon: <PiGraduationCapBold />,
+    qualification: "Bsc. (C.S)",
+    qualifiedYear: "2023",
+    organisation: "C.C.S University",
+    organisationPlace: "Meerut, U.P",
+    aggregation: "74.5",
+    aggregationType: "%"
+  },
+  {
+    icon: <LuSchool />,
+    qualification: "Intermediate",
+    qualifiedYear: "2019",
+    organisation: "C.B.S.E",
+    organisationPlace: "Saharanpur, U.P",
+    aggregation: "70",
+    aggregationType: "%"
+  },
+  {
+    icon: <LuSchool />,
+    qualification: "High School",
+    qualifiedYear: "2017",
+    organisation: "C.B.S.E",
+    organisationPlace: "Saharanpur, U.P",
+    aggregation: "70",
+    aggregationType: "%"
+  },
+]
 
+const project = [
+  {
+    name: "Social Media",
+    link: "https://github.com/MANISH-SHARMA1/Social-Media",
+  },
+  {
+    name: "Ecommerce",
+    link: "https://github.com/MANISH-SHARMA1/Ecommerce-application-",
+  },
+];
+
+function About() {
   const educationRef = useRef(null);
 
   useEffect(() => {
@@ -59,86 +99,59 @@ function About() {
 
           <div
             ref={educationRef}
-            className="flex flex-col gap-5 md:gap-5 md:flex-row md:justify-around items-center my-5"
+            className="max-w-screen-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-5"
           >
-            <div
-              style={{ backgroundColor: "rgb(14, 54, 70)" }}
-              className="edu-card rounded p-5 w-80 opacity-0"
-            >
-              <div className="text-xl flex item-center justify-between">
-                <p className="text-cyan-400">
-                  <PiGraduationCapBold />
+            {education.map((education, index) => (
+              <div
+                key={index}
+                style={{ backgroundColor: "rgb(14, 54, 70)" }}
+                className="edu-card rounded p-5 opacity-0 space-y-1"
+              >
+                <div className="text-xl flex item-center justify-between">
+                  <p className="text-cyan-400">
+                    {education.icon}
+                  </p>
+                  <p>
+                    {education.qualification} <span className="text-cyan-400">({education.qualifiedYear})</span>
+                  </p>
+                </div>
+                <p>
+                  {education.organisation},{" "}
+                  <span className="text-cyan-400 text-sm">
+                    {education.organisationPlace}
+                  </span>
                 </p>
                 <p>
-                  Graduation <span className="text-cyan-400">(2023)</span>
+                  <span className="text-cyan-400 text-sm">Aggregation:</span>{" "}
+                  {education.aggregation} {education.aggregationType}
                 </p>
               </div>
-              <p>
-                Choudhary Charan Singh University,{" "}
-                <span className="text-cyan-400 text-sm">
-                  Meerut, Uttar Pradesh
-                </span>
-              </p>
-              <p>
-                <span className="text-cyan-400 text-sm">Aggregation:</span>{" "}
-                74.5%
-              </p>
-            </div>
-
-            <div
-              style={{ backgroundColor: "rgb(14, 54, 70)" }}
-              className="edu-card rounded p-5 w-80 opacity-0"
-            >
-              <div className="text-xl flex item-center justify-between">
-                <p className="text-cyan-400">
-                  <LuSchool />
-                </p>
-                <p>
-                  Intermediate <span className="text-cyan-400">(2019)</span>
-                </p>
-              </div>
-              <p>
-                Central Board of Secondary Education{" "}
-                <span className="text-cyan-400 text-sm">
-                  Saharanpur, Uttar Pradesh
-                </span>
-              </p>
-              <p>
-                <span className="text-cyan-400 text-sm">Aggregation:</span> 70%
-              </p>
-            </div>
-
-            <div
-              style={{ backgroundColor: "rgb(14, 54, 70)" }}
-              className="edu-card rounded p-5 w-80 opacity-0"
-            >
-              <div className="text-xl flex item-center justify-between">
-                <p className="text-cyan-400">
-                  <LuSchool />
-                </p>
-                <p>
-                  High School <span className="text-cyan-400">(2017)</span>
-                </p>
-              </div>
-              <p>
-                Central Board of Secondary Education{" "}
-                <span className="text-cyan-400 text-sm">
-                  Saharanpur, Uttar Pradesh
-                </span>
-              </p>
-              <p>
-                <span className="text-cyan-400 text-sm">Aggregation:</span> 70%
-              </p>
-            </div>
+            ))}
           </div>
         </section>
 
         {/* CERTIFICATES */}
-        <section>
-          <p className="text-center text-2xl font-semibold">
+        <section className="flex flex-col items-center justify-center gap-5">
+          <p className="text-2xl font-semibold">
             Certifi<span className="text-cyan-400">cates</span>
           </p>
-          <div className="flex items-center justify-center my-5 mx-5 sm:mx-0">
+            <div>
+              <div className="flex items-center justify-between mb-2">
+                <p className="text-cyan-400">
+                  <PiCertificateBold size={23} />
+                </p>{" "}
+                <p className="text-xs sm:text-base">
+                  Full Stack Developer Intern at{" "}
+                  <span className="text-cyan-400">Aartick Technologies</span>
+                </p>
+              </div>
+              <img
+                src={aartickExperience}
+                alt="aartickExperience"
+                className="w-[400px] sm:w-[500px] border-2 border-amber-600 rounded"
+              />
+            </div>
+
             <div>
               <div className="flex items-center justify-between mb-2">
                 <p className="text-cyan-400">
@@ -155,7 +168,6 @@ function About() {
                 className="w-[400px] sm:w-[500px] border-2 border-amber-600 rounded"
               />
             </div>
-          </div>
         </section>
 
         {/* PROJECTS */}

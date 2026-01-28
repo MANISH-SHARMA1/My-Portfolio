@@ -22,7 +22,7 @@ function ProjectCard({ project, index }) {
         trigger: element,
         start: "top 85%",
         end: "bottom top",
-        toggleActions: "play reverse play reverse",
+        once: true,
       },
     });
 
@@ -46,7 +46,7 @@ function ProjectCard({ project, index }) {
     <div
       ref={cardRef}
       style={{ backgroundColor: "rgb(14, 54, 70)" }}
-      className="w-full rounded p-5 w-80 space-y-2 opacity-0 transform"
+      className="w-full rounded p-5 space-y-2 opacity-0 transform"
     >
       <a href={project.link} target="_blank" rel="noopener noreferrer">
         <div className="text-cyan-400 flex justify-between">
