@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { SiCodechef } from "react-icons/si";
 import gsap from "gsap";
-import { Link } from "react-router-dom";
 import { TbExternalLink } from "react-icons/tb";
 
 function Card({ data }) {
@@ -59,7 +58,11 @@ function Card({ data }) {
             <p className="text-animate">{data?.techStack}</p>
             <p className="text-animate">{data?.date}</p>
             <div className="text-animate">
-              <a href={data.link} target="_blank">
+              <a 
+                href={data.link} 
+                target="_blank"
+                rel="noreferrer"
+              >
               {data.link ? <TbExternalLink /> : "Not Available"}
               </a>
             </div>
