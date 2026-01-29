@@ -172,11 +172,11 @@ function About() {
 
         {/* PROJECTS */}
         <section>
-          <p className="text-center text-2xl font-semibold">
+          <p className="mt-5 text-center text-2xl font-semibold">
             Pro<span className="text-cyan-400">jects</span>
           </p>
 
-          <div className="flex flex-col gap-5 md:gap-5 md:flex-row md:justify-around items-center mt-5 mb-40 mx-5 sm:mx-20">
+          <div className="flex flex-col gap-5 md:gap-5 md:flex-row md:justify-around items-center mt-5 mb-40 mx-5">
             {project.map((data, idx) => (
               <ProjectCard project={data} key={idx} index={idx} />
             ))}

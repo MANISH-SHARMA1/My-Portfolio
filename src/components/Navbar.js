@@ -51,9 +51,13 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-14 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-devinaGarden text-white">
+            <HashLink
+              smooth
+              to="/#manisharma"
+              className="text-2xl font-devinaGarden text-white"
+            >
               Manish Sharma
-            </Link>
+            </HashLink>
           </div>
 
           {/* Desktop Navigation */}

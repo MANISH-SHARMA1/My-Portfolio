@@ -110,7 +110,7 @@ function Home() {
   const repeatedCards = [...cards, ...cards];
 
   return (
-    <div className="max-w-screen-2xl mx-auto text-white overflow-x-hidden">
+    <div id="manisharma" className="max-w-screen-2xl mx-auto text-white overflow-x-hidden scroll-mt-20 sm:scroll-mt-28">
       {/* TOP SECTION */}
       <section className="flex flex-col-reverse mx-5 sm:flex-row sm:items-center -mt-16 sm:-mt-0">
         <div className="sm:flex-1 flex flex-col gap-2">
@@ -242,7 +242,7 @@ function Home() {
         Ex<span className="text-cyan-400">perience</span>
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2  gap-4 mx-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mx-4">
         {card.map((data, idx) => (
           <Card data={data} key={idx} />
         ))}
@@ -252,7 +252,7 @@ function Home() {
         Pro<span className="text-cyan-400">ject</span>
       </p>
 
-      <div className="flex flex-col gap-5 md:gap-5 md:flex-row md:justify-around items-center mt-5 mb-40 mx-5 sm:mx-20">
+      <div className="flex flex-col gap-5 md:gap-5 md:flex-row md:justify-around items-center mt-5 mb-40 mx-5">
         {project.map((data, idx) => (
           <ProjectCard project={data} key={idx} index={idx} />
         ))}
