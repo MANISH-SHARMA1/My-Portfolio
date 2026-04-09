@@ -17,20 +17,29 @@ import Nodejs from "../assets/nodejsImg.png";
 import Expressjs from "../assets/expressjsImg.png";
 import Mongoose from "../assets/mongoose.png";
 import mongoDb from "../assets/mongodbImg.jpg";
-import gsapImg from "../assets/gsapImg.png"
+import gsapImg from "../assets/gsapImg.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
   const card = [
     {
+      role: "Front End Developer",
+      name: "The Boon Kids",
+      applicationType: "Website",
+      techStack:
+        "Next.js, TypeScript, TailwindCSS, GSAP, Motion",
+      date: "April 2026 - Present",
+      link: "https://theboonkids.com",
+    },
+    {
       role: "Full Stack Developer",
       name: "Book And Buy",
       applicationType: "Website Revamp",
       techStack:
         "Next.js, TypeScript, TailwindCSS, GSAP, Motion, Node.js, Express.js, Mongoose, MongoDB",
-      date: "January 2026 - Present",
-      link: "https://bookandbuy.in"
+      date: "January 2026 - March 2026",
+      link: "https://bookandbuy.in",
     },
     {
       role: "Full Stack Developer Intern",
@@ -39,7 +48,7 @@ function Home() {
       techStack:
         "Next.js, TypeScript, TailwindCSS, GSAP, Motion, Node.js, Express.js, Mongoose, MongoDB",
       date: "August 2025 - December 2025",
-      link: "https://zlshealth.com"
+      link: "https://zlshealth.com",
     },
     {
       role: "Full Stack Developer (Nextjs)",
@@ -48,7 +57,7 @@ function Home() {
       techStack:
         "Next.js, TypeScript, TailwindCSS, Node.js, Express.js, Mongoose, MongoDB",
       date: "May 2025 - June 2025",
-      link: ""
+      link: "",
     },
     {
       role: "Full Stack Developer (React Native)",
@@ -57,7 +66,7 @@ function Home() {
       techStack:
         "React Native, TailwindCSS, TypeScript, Node.js, Express.js, Mongoose, MongoDB",
       date: "February 2025 - April 2025",
-      link: ""
+      link: "",
     },
     {
       role: "Full Stack Developer (MERN)",
@@ -66,7 +75,7 @@ function Home() {
       techStack:
         "React.js, TailwindCSS, GSAP, Node.js, Express.js, Mongoose, MongoDB",
       date: "June 2024 - January 2025",
-      link: "https://bookandbuy.in"
+      link: "https://bookandbuy.in",
     },
   ];
 
@@ -98,7 +107,7 @@ function Home() {
     { id: 2, img: Reactjs, content: "React.js" },
     { id: 3, img: Reactjs, content: "React Native" },
     { id: 4, img: Typescript, content: "TypeScript" },
-    { id: 11, img: gsapImg, content: "GSAP"},
+    { id: 11, img: gsapImg, content: "GSAP" },
     { id: 5, img: Tailwindcss, content: "Tailwind CSS" },
     { id: 6, img: CSSImg, content: "CSS" },
     { id: 7, img: Nodejs, content: "Node.js" },
@@ -110,7 +119,10 @@ function Home() {
   const repeatedCards = [...cards, ...cards];
 
   return (
-    <div id="manisharma" className="max-w-screen-2xl mx-auto text-white overflow-x-hidden scroll-mt-20 sm:scroll-mt-28">
+    <div
+      id="manisharma"
+      className="max-w-screen-2xl mx-auto text-white overflow-x-hidden scroll-mt-20 sm:scroll-mt-28"
+    >
       {/* TOP SECTION */}
       <section className="flex flex-col-reverse mx-5 sm:flex-row sm:items-center -mt-16 sm:-mt-0">
         <div className="sm:flex-1 flex flex-col gap-2">
@@ -216,7 +228,10 @@ function Home() {
         </div>
       </section>
 
-      <p id="techStack" className="scroll-mt-24 sm:scroll-mt-28 text-2xl font-semibold text-center my-10 header translate-y-[100%] drop-shadow-md opacity-0">
+      <p
+        id="techStack"
+        className="scroll-mt-24 sm:scroll-mt-28 text-2xl font-semibold text-center my-10 header translate-y-[100%] drop-shadow-md opacity-0"
+      >
         Tech <span className="text-cyan-400">Stack</span>
       </p>
 
@@ -238,7 +253,10 @@ function Home() {
         </div>
       </div>
 
-      <p id="experience" className="scroll-mt-24 sm:scroll-mt-28 text-2xl font-semibold text-center my-10 header translate-y-[100%] drop-shadow-md opacity-0">
+      <p
+        id="experience"
+        className="scroll-mt-24 sm:scroll-mt-28 text-2xl font-semibold text-center my-10 header translate-y-[100%] drop-shadow-md opacity-0"
+      >
         Ex<span className="text-cyan-400">perience</span>
       </p>
 
