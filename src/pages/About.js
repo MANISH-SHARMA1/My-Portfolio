@@ -1,63 +1,13 @@
-import React, { useEffect, useRef } from "react";
-import { PiGraduationCapBold, PiCertificateBold } from "react-icons/pi";
-import { LuSchool } from "react-icons/lu";
+import { useEffect, useRef } from "react";
+import { PiCertificateBold } from "react-icons/pi";
 import certificate from "../assets/MERN_certificate.png";
 import aartickExperience from "../assets/AartickExperienceLetter.jpg"
 import ProjectCard from "../components/ProjectCard";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { education, project } from "../utils/data";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const education = [
-  {
-    icon: <PiGraduationCapBold />,
-    qualification: "M.C.A",
-    qualifiedYear: "2025",
-    organisation: "Amity University",
-    organisationPlace: "Noida, U.P",
-    aggregation: "8.38",
-    aggregationType: "CGPA"
-  },
-  {
-    icon: <PiGraduationCapBold />,
-    qualification: "Bsc. (C.S)",
-    qualifiedYear: "2023",
-    organisation: "C.C.S University",
-    organisationPlace: "Meerut, U.P",
-    aggregation: "74.5",
-    aggregationType: "%"
-  },
-  {
-    icon: <LuSchool />,
-    qualification: "Intermediate",
-    qualifiedYear: "2019",
-    organisation: "C.B.S.E",
-    organisationPlace: "Saharanpur, U.P",
-    aggregation: "70",
-    aggregationType: "%"
-  },
-  {
-    icon: <LuSchool />,
-    qualification: "High School",
-    qualifiedYear: "2017",
-    organisation: "C.B.S.E",
-    organisationPlace: "Saharanpur, U.P",
-    aggregation: "70",
-    aggregationType: "%"
-  },
-]
-
-const project = [
-  {
-    name: "Social Media",
-    link: "https://github.com/MANISH-SHARMA1/Social-Media",
-  },
-  {
-    name: "Ecommerce",
-    link: "https://github.com/MANISH-SHARMA1/Ecommerce-application-",
-  },
-];
 
 function About() {
   const educationRef = useRef(null);
