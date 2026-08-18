@@ -5,7 +5,6 @@ import { PiWhatsappLogo } from "react-icons/pi";
 import {
   MdCall,
   MdEmail,
-  MdConnectWithoutContact,
   MdSend,
 } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
@@ -238,7 +237,7 @@ function Contact() {
 
             <div className="mt-5 flex gap-4">
               <a
-                href="#"
+                href="https://github.com/MANISH-SHARMA1"
                 aria-label="GitHub"
                 className="
                   flex h-11 w-11 items-center justify-center
@@ -252,7 +251,7 @@ function Contact() {
               </a>
 
               <a
-                href="#"
+                href="www.linkedin.com/in/manish-sharma-4ba39520b"
                 aria-label="LinkedIn"
                 className="
                   flex h-11 w-11 items-center justify-center
