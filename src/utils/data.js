@@ -12,12 +12,20 @@ import { PiGraduationCapBold } from "react-icons/pi";
 import { LuSchool } from "react-icons/lu";
 
 export const card = [
+   {
+    role: "Full Stack Developer",
+    name: "Yantramantra",
+    applicationType: "Website",
+    techStack: "Next.js, TypeScript, TailwindCSS, GSAP, Motion, Node.js, Express.js, Mongoose, MongoDB",
+    date: "July 2026 - Present",
+    link: "https://yantramantra.in",
+  },
   {
-    role: "Front End Developer",
+    role: "Full Stack Developer",
     name: "The Boon Kids",
     applicationType: "Website",
-    techStack: "Next.js, TypeScript, TailwindCSS, GSAP, Motion",
-    date: "April 2026 - Present",
+    techStack: "Next.js, TypeScript, TailwindCSS, GSAP, Motion, Node.js, Express.js, Mongoose, MongoDB",
+    date: "April 2026 - June 2026",
     link: "https://theboonkids.com",
   },
   {
